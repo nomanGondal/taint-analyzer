@@ -1,0 +1,23 @@
+{
+  "site_package_search_strategy": "all",
+  "source_directories": [
+    "app",
+    "constants",
+    "scanner"
+  ],
+  "exclude": [
+    "^venv/.*",
+    "^\\.venv/.*",
+    "^\\.pyre/.*",
+    "^reports/.*",
+    "^benchmarks/.*"
+  ],
+  "search_path": [
+    "pysa_rules/stubs"
+  ],
+  "taint_models_path": [
+    "pysa_rules"
+  ],
+  "strict": false,
+  "python_version": "3.11"
+}

@@ -1,0 +1,14 @@
+Task 1:
+    update Readme.md for project launching.
+Task 2:
+    mcp_vulnerabilities are not listed in the reports.
+Task 3:
+    make mcp_vulnerabilies check script only to entertain the mcp agents.
+Task 4:
+    refactor code:
+        1: 
+            - Keep constants of overall app into dedicated /constants/index.py
+        2: 
+            - Extract reuseable util functions into dedicated /utils
+Task 5:
+    one scan is only for one benchmark code snippet.

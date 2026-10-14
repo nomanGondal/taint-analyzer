@@ -1,0 +1,2 @@
+# Reserved for generated or hand-written MCP-specific models (e.g. ModelQuery on @tool).
+# Core rules live in mcp_sources.pysa, mcp_sinks.pysa, mcp_sanitizers.pysa.

@@ -1,0 +1,142 @@
+
+def os.system(
+    command: TaintSink[RemoteCodeExecution],
+): ...
+
+def subprocess.run(
+    args: TaintSink[RemoteCodeExecution],
+    shell: TaintSink[RemoteCodeExecution] = ...,
+): ...
+
+def subprocess.Popen(
+    args: TaintSink[RemoteCodeExecution],
+    shell: TaintSink[RemoteCodeExecution] = ...,
+): ...
+
+def subprocess.call(
+    args: TaintSink[RemoteCodeExecution],
+): ...
+
+def subprocess.check_output(
+    args: TaintSink[RemoteCodeExecution],
+): ...
+
+# Code injection
+def eval(
+    expression: TaintSink[CodeExecution],
+): ...
+
+def exec(
+    object: TaintSink[CodeExecution],
+): ...
+
+def compile(
+    source: TaintSink[CodeExecution],
+    filename: str,
+    mode: str,
+): ...
+
+
+def open(
+    file: TaintSink[FileSystem],
+    mode: str = ...,
+): ...
+
+def os.remove(
+    path: TaintSink[FileSystem],
+): ...
+
+def os.unlink(
+    path: TaintSink[FileSystem],
+): ...
+
+def os.makedirs(
+    name: TaintSink[FileSystem],
+    mode: int = ...,
+): ...
+
+def os.rename(
+    src: TaintSink[FileSystem],
+    dst: TaintSink[FileSystem],
+): ...
+
+def os.path.join(
+    __a: TaintSink[FileSystem],
+): ...
+
+def shutil.copy(
+    src: TaintSink[FileSystem],
+    dst: TaintSink[FileSystem],
+): ...
+
+def shutil.move(
+    src: TaintSink[FileSystem],
+    dst: TaintSink[FileSystem],
+): ...
+
+
+def sqlite3.Connection.execute(
+    self,
+    sql: TaintSink[SQL],
+): ...
+
+def sqlite3.Cursor.execute(
+    self,
+    sql: TaintSink[SQL],
+): ...
+
+def sqlite3.Cursor.executemany(
+    self,
+    sql: TaintSink[SQL],
+): ...
+
+def sqlalchemy.engine.Connection.execute(
+    self,
+    statement: TaintSink[SQL],
+): ...
+
+
+
+def requests.get(
+    url: TaintSink[SSRF],
+): ...
+
+def requests.post(
+    url: TaintSink[SSRF],
+): ...
+
+def requests.put(
+    url: TaintSink[SSRF],
+): ...
+
+def requests.request(
+    method: str,
+    url: TaintSink[SSRF],
+): ...
+
+def httpx.get(
+    url: TaintSink[SSRF],
+): ...
+
+def httpx.post(
+    url: TaintSink[SSRF],
+): ...
+
+def httpx.AsyncClient.get(
+    self,
+    url: TaintSink[SSRF],
+): ...
+
+def httpx.AsyncClient.post(
+    self,
+    url: TaintSink[SSRF],
+): ...
+
+def urllib.request.urlopen(
+    url: TaintSink[SSRF],
+): ...
+
+def aiohttp.ClientSession.get(
+    self,
+    url: TaintSink[SSRF],
+): ...

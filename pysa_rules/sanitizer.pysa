@@ -1,0 +1,49 @@
+def shlex.quote(
+    s: TaintInTaintOut[TaintSink[RemoteCodeExecution]]
+) -> TaintSanitizer[RemoteCodeExecution]: ...
+
+
+
+# int/float conversion — SQL injection impossible
+def int(
+    x: TaintInTaintOut[TaintSink[SQL]]
+) -> TaintSanitizer[SQL]: ...
+
+def float(
+    x: TaintInTaintOut[TaintSink[SQL]]
+) -> TaintSanitizer[SQL]: ...
+
+
+
+def html.escape(
+    s: TaintInTaintOut[TaintSink[XSS]]
+) -> TaintSanitizer[XSS]: ...
+
+def markupsafe.escape(
+    s: TaintInTaintOut[TaintSink[XSS]]
+) -> TaintSanitizer[XSS]: ...
+
+def bleach.clean(
+    text: TaintInTaintOut[TaintSink[XSS]]
+) -> TaintSanitizer[XSS]: ...
+
+
+
+def os.path.basename(
+    p: TaintInTaintOut[TaintSink[FileSystem]]
+) -> TaintSanitizer[FileSystem]: ...
+
+def pathlib.Path.resolve(
+    self: TaintInTaintOut[TaintSink[FileSystem]]
+) -> TaintSanitizer[FileSystem]: ...
+
+# Regex validation
+def re.fullmatch(
+    pattern: str,
+    string: TaintInTaintOut[TaintSink[FileSystem]]
+) -> TaintSanitizer[FileSystem]: ...
+
+def re.match(
+    pattern: str,
+    string: TaintInTaintOut[TaintSink[FileSystem]]
+) -> TaintSanitizer[FileSystem]: ...

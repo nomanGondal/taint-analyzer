@@ -1,0 +1,67 @@
+def mcp.types.CallToolRequestParams.arguments(
+    self,
+) -> TaintSource[MCPToolInput]: ...
+
+def mcp.server.lowlevel.Server._call_tool(
+    self,
+    name: str,
+    arguments: TaintSource[MCPToolInput],
+): ...
+
+
+
+def starlette.requests.Request.query_params(
+    self,
+) -> TaintSource[HTTPInput]: ...
+
+def starlette.requests.Request.path_params(
+    self,
+) -> TaintSource[HTTPInput]: ...
+
+def starlette.datastructures.QueryParams.get(
+    self,
+    key: str,
+) -> TaintSource[HTTPInput]: ...
+
+
+def starlette.requests.Request.body(
+    self,
+) -> TaintSource[HTTPInput]: ...
+
+def starlette.requests.Request.json(
+    self,
+) -> TaintSource[HTTPInput]: ...
+
+def starlette.requests.Request.form(
+    self,
+) -> TaintSource[HTTPInput]: ...
+
+
+def starlette.requests.Request.headers(
+    self,
+) -> TaintSource[HTTPInput]: ...
+
+
+def starlette.websockets.WebSocket.receive_text(
+    self,
+) -> TaintSource[HTTPInput]: ...
+
+def starlette.websockets.WebSocket.receive_bytes(
+    self,
+) -> TaintSource[HTTPInput]: ...
+
+
+def os.environ.get(
+    key: str,
+    default: str = ...,
+) -> TaintSource[EnvInput]: ...
+
+def os.getenv(
+    key: str,
+    default: str = ...,
+) -> TaintSource[EnvInput]: ...
+
+
+def input(
+    __prompt: str = ...,
+) -> TaintSource[UserControlled]: ...

@@ -1,0 +1,30 @@
+# Pyre
+.pyre/
+
+# Python
+venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Env
+.env
+
+# Generated / heavy artifacts
+reports/
+benchmarks/
+nul
+*.zip
+*.log
+*.tmp
+*.bak
+
+vulnerability_scanner_for_ai_agents
